@@ -43,7 +43,7 @@ export const profileData: ProfileData = {
 export const weltschmerzTheme: PortfolioPageProperties = {
   type: "fullscreen",
   styles: ["anime", "dark", "hacker", "neon"],
-  features: ["floating-girl", "glitch-transition", "ascii-loader", "easter-eggs", "3d-mouse-parallax", "secret-code"],
+  features: ["floating-girl", "3d-mouse-parallax", "secret-code"],
   floatingGirl: {
     id: "weltschmerz",
     name: "Weltschmerz-chan",
@@ -81,7 +81,7 @@ export const weltschmerzTheme: PortfolioPageProperties = {
 export const crystallineTheme: PortfolioPageProperties = {
   type: "fullscreen",
   styles: ["anime", "moe", "pink", "minimal"],
-  features: ["floating-girl", "glitch-transition", "ascii-loader", "easter-eggs", "3d-mouse-parallax", "secret-code"],
+  features: ["floating-girl", "3d-mouse-parallax", "secret-code"],
   floatingGirl: {
     id: "crystalline",
     name: "Crystalline-chan",

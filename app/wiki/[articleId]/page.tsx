@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: WikiArticlePageProps): Promis
   }
 
   return {
-    title: `${article.title} | ${siteConfig.name}`,
+    title: article.title,
     description: article.description,
     openGraph: {
       title: article.title,
@@ -93,29 +93,14 @@ export default async function WikiArticlePage({ params }: WikiArticlePageProps) 
             </div>
           </div>
 
-          <div className="prose prose-blue max-w-none">
+          <div className="max-w-none space-y-5 leading-relaxed text-gray-700 [&_a]:text-blue-700 [&_a]:underline">
             <Markdown>{article.content}</Markdown>
           </div>
         </div>
 
-        <div className="mt-8 flex flex-wrap gap-4 justify-center">
-          <Link
-            href="/wiki/help"
-            className="px-4 py-2 bg-blue-100 text-blue-700 rounded-md hover:bg-blue-200 transition-colors"
-          >
-            Help & FAQ
-          </Link>
-          <Link
-            href="/wiki/privacy"
-            className="px-4 py-2 bg-blue-100 text-blue-700 rounded-md hover:bg-blue-200 transition-colors"
-          >
-            Privacy Policy
-          </Link>
-          <Link
-            href="/wiki/self-hosting"
-            className="px-4 py-2 bg-blue-100 text-blue-700 rounded-md hover:bg-blue-200 transition-colors"
-          >
-            Self-Hosting Guide
+        <div className="mt-8 text-center">
+          <Link href="/wiki" className="inline-block rounded-md bg-blue-100 px-4 py-2 text-blue-700 hover:bg-blue-200">
+            All notes
           </Link>
         </div>
       </div>

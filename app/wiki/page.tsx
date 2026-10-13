@@ -5,25 +5,25 @@ import { siteConfig } from "@/data/portfolio-data"
 import { ChevronLeft, ChevronRight, Github } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: `Wiki | ${siteConfig.name}`,
-  description: "Documentation and guides for the Anime Dev Portfolio",
+  title: "Wiki",
+  description: "Research notes, project notes, and information about ColorEyes’ homepage.",
   openGraph: {
     title: `Wiki | ${siteConfig.name}`,
-    description: "Documentation and guides for the Anime Dev Portfolio",
+    description: "Research notes, project notes, and information about ColorEyes’ homepage.",
     url: `${siteConfig.url}/wiki`,
     images: [
       {
         url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: "Anime Dev Portfolio Wiki",
+        alt: "ColorEyes Wiki",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: `Wiki | ${siteConfig.name}`,
-    description: "Documentation and guides for the Anime Dev Portfolio",
+    description: "Research notes, project notes, and information about ColorEyes’ homepage.",
     images: [siteConfig.ogImage],
     creator: siteConfig.creator,
   },
@@ -52,10 +52,9 @@ export default function WikiPage() {
         </div>
 
         <div className="bg-white rounded-xl shadow-lg p-6 md:p-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Wiki & Documentation</h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Wiki & Notes</h1>
           <p className="text-gray-600 mb-8">
-            Welcome to the Anime Dev Portfolio wiki. Here you'll find documentation, guides, and other helpful
-            information about using and customizing the portfolio.
+            Notes on my research, projects, and explorations. This collection is just getting started.
           </p>
 
           <div className="grid gap-6 md:grid-cols-2">
