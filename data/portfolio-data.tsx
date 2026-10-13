@@ -1,0 +1,232 @@
+import type { Work, WorkCategory, PortfolioPageProperties, ProfileData } from "@/types"
+
+// Profile data
+export const profileData: ProfileData = {
+  "position": "top",
+  "name": {
+    "en": "ColorEyes",
+    "ja": "ColorEyes"
+  },
+  "role": {
+    "en": "My work, in color.",
+    "ja": "仕事とアイデアに、彩りを。"
+  },
+  "location": {
+    "en": "",
+    "ja": ""
+  },
+  "bio": {
+    "en": "Welcome to my little corner of the internet. This will be a home for my work, ideas, and things I am exploring. My full introduction is coming soon.",
+    "ja": "私の小さなホームページへようこそ。作品やアイデア、探究していることをここにまとめていきます。詳しい自己紹介は準備中です。"
+  },
+  "experience": {
+    "en": "",
+    "ja": ""
+  },
+  "email": "",
+  "image": "/images/avatar.png",
+  "social": {
+    "github": "https://github.com/coloreyes"
+  },
+  "skills": {
+    "frontend": [],
+    "backend": [],
+    "thrownAway": [],
+    "occasional": [],
+    "other": [],
+    "dailyHeavy": [],
+    "dailyLight": []
+  }
+}
+
+// Weltschmerz theme configuration (dark)
+export const weltschmerzTheme: PortfolioPageProperties = {
+  type: "fullscreen",
+  styles: ["anime", "dark", "hacker", "neon"],
+  features: ["floating-girl", "glitch-transition", "ascii-loader", "easter-eggs", "3d-mouse-parallax", "secret-code"],
+  floatingGirl: {
+    id: "weltschmerz",
+    name: "Weltschmerz-chan",
+    description: "A quiet girl who feels the weight of the world",
+    image: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/weltschmerz.png`,
+    floatingStyle: "glitchy",
+    mood: "mysterious",
+    phrases: [
+      "Some days the world feels heavy.",
+      "Ink dries, but the stain stays.",
+      "Stay a little longer, if you like.",
+      "Let me show you something quiet...",
+    ],
+    interactionTriggers: ["hover", "click", "secret-code"],
+    themeAffinity: ["hacker", "dark"],
+  },
+  enableTerminalCommands: true,
+  cursorStyle: "glitch",
+  gradientBg: "bg-gradient-to-br from-gray-900 via-purple-900 to-black",
+  textColor: "text-white",
+  cardBg: "bg-gray-900",
+  cardBorder: "border-gray-800",
+  cardHoverBorder: "border-pink-500",
+  buttonBg: "bg-gray-800",
+  buttonHoverBg: "bg-gray-700",
+  accentColor: "text-pink-500",
+  secondaryColor: "text-gray-400",
+  headerBg: "bg-black/70",
+  footerBg: "bg-black/70",
+  siteTitle: "ColorEyes | Weltschmerz",
+  siteDescription: "A dark, quiet developer portfolio with the original character Weltschmerz-chan",
+}
+
+// Crystalline theme configuration (light)
+export const crystallineTheme: PortfolioPageProperties = {
+  type: "fullscreen",
+  styles: ["anime", "moe", "pink", "minimal"],
+  features: ["floating-girl", "glitch-transition", "ascii-loader", "easter-eggs", "3d-mouse-parallax", "secret-code"],
+  floatingGirl: {
+    id: "crystalline",
+    name: "Crystalline-chan",
+    description: "A watercolor girl who walks with a deer made of glass",
+    image: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/crystalline.png`,
+    floatingStyle: "hover",
+    mood: "cheerful",
+    phrases: [
+      "Everything looks clearer through glass.",
+      "Did you see the deer? It's made of light.",
+      "Colors bleed, and that's the best part.",
+      "Let me show you something that sparkles...",
+    ],
+    interactionTriggers: ["hover", "click", "secret-code"],
+    themeAffinity: ["moe", "pink"],
+  },
+  enableTerminalCommands: true,
+  cursorStyle: "default",
+  gradientBg: "bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100",
+  textColor: "text-blue-900",
+  cardBg: "bg-white",
+  cardBorder: "border-blue-200",
+  cardHoverBorder: "border-blue-500",
+  buttonBg: "bg-blue-100",
+  buttonHoverBg: "bg-blue-200",
+  accentColor: "text-blue-600",
+  secondaryColor: "text-blue-400",
+  headerBg: "bg-white/70",
+  footerBg: "bg-white/70",
+  siteTitle: "ColorEyes | Crystalline",
+  siteDescription: "A light watercolor developer portfolio with the original character Crystalline-chan",
+}
+
+// Portfolio works data
+export const works: Work[] = [
+  {
+    id: "neural-singer",
+    title: "Neural Singer",
+    description:
+      "An AI-powered voice synthesizer that can mimic any singing voice with just a few samples. Built with PyTorch and React.",
+    descriptionShort: "AI voice synthesis for the masses",
+    images: [
+      "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1558507652-2d9626c4e67a?q=80&w=2070&auto=format&fit=crop",
+    ],
+    tags: ["AI", "PyTorch", "React", "Web Audio API", "TensorFlow.js"],
+    date: "2025-04",
+    featured: true,
+  },
+  {
+    id: "quiet-protocol",
+    title: "Quiet Protocol",
+    description: "A decentralized social network with unique avatars and a custom UI.",
+    descriptionShort: "Connect with like-minded people",
+    images: [
+      "https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=2070&auto=format&fit=crop",
+    ],
+    tags: ["React", "Node.js", "WebRTC", "Encryption", "P2P"],
+    date: "2025-02",
+    featured: true,
+  },
+  {
+    id: "hologram-live",
+    title: "Hologram Live",
+    description: "A WebGL-based virtual concert platform that creates hologram-like performances in your browser.",
+    descriptionShort: "Virtual concerts in your browser",
+    images: [
+      "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=2070&auto=format&fit=crop",
+    ],
+    tags: ["Three.js", "WebGL", "React", "Web Audio API"],
+    date: "2024-12",
+    featured: true,
+  },
+  {
+    id: "quantum-cat",
+    title: "Quantum Cat",
+    description:
+      "A quantum computing simulator with a cat-themed interface. Educational tool for learning quantum algorithms.",
+    descriptionShort: "Learn quantum computing with cats",
+    images: [
+      "https://images.unsplash.com/photo-1573865526739-10659fec78a5?q=80&w=2015&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?q=80&w=2070&auto=format&fit=crop",
+    ],
+    tags: ["TypeScript", "React", "D3.js", "Quantum Computing"],
+    date: "2024-10",
+    isWtfProject: true,
+  },
+  {
+    id: "pixel-painter",
+    title: "Pixel Painter",
+    description: "A collaborative pixel art creation tool with real-time multiplayer capabilities.",
+    descriptionShort: "Create pixel art together",
+    images: [
+      "https://images.unsplash.com/photo-1563089145-599997674d42?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?q=80&w=2074&auto=format&fit=crop",
+    ],
+    tags: ["Canvas API", "Socket.io", "React", "Node.js"],
+    date: "2024-08",
+    isWtfProject: true,
+  },
+]
+
+// Portfolio categories
+export const categories: WorkCategory[] = [
+  {
+    id: "featured",
+    title: "Featured Works",
+    icon: "✨",
+    works: works.filter((work) => work.featured),
+  },
+  {
+    id: "all",
+    title: "All Projects",
+    icon: "🚀",
+    works: works,
+  },
+  {
+    id: "wtf",
+    title: "Experimental",
+    icon: "🧪",
+    description: "The weird and wonderful experiments",
+    works: works.filter((work) => work.isWtfProject),
+  },
+]
+
+// Site configuration
+export const siteConfig = {
+  name: "ColorEyes",
+  url: "https://coloreyes.github.io",
+  ogImage: "https://coloreyes.github.io/og.png",
+  description: "ColorEyes — personal work, ideas, and explorations.",
+  links: {
+    github: "https://github.com/coloreyes",
+  },
+  creator: "ColorEyes",
+  keywords: [
+    "developer portfolio",
+    "anime",
+    "react",
+    "next.js",
+    "typescript",
+    "tailwindcss",
+    "framer motion",
+    "interactive",
+  ],
+}
